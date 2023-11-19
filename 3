@@ -1,0 +1,9 @@
+import numpy as np
+def calculate_slope(x_values, y_values):
+coefficients = np.polyfit(x_values, y_values, 1)
+return coefficients[0]
+#  данные о времени учебы (в часах) и оценках студента
+study_hours = [2, 4, 5, 6, 7]
+grades = [65, 70, 80, 95, 100]
+result_slope = calculate_slope(study_hours, grades)
+print(f"Учебный наклон: {result_slope}")
